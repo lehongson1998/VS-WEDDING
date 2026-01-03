@@ -42,7 +42,6 @@ textarea {
 }
 
 .container {
-  position: relative;
   width: 420px;
   margin: 0 auto;
 }
@@ -469,13 +468,20 @@ textarea {
   font-size: 36px;
   color: white;
   cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
 }
 
 .lightbox .nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 40px;
+  font-size: 36px;
   color: white;
   cursor: pointer;
   user-select: none;
@@ -483,10 +489,24 @@ textarea {
 
 .lightbox .prev {
   left: 20px;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
 }
 
 .lightbox .next {
   right: 20px;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
 }
 
 .wedding-form {

@@ -81,11 +81,14 @@ moreThumb.addEventListener("click", () => {
 
 /* ===== LIGHTBOX ===== */
 mainImage.addEventListener("click", () => {
+  stopAuto();
   lightbox.classList.add("active");
 });
 
-document.querySelector(".close").onclick = () =>
+document.querySelector(".close").onclick = () => {
   lightbox.classList.remove("active");
+  startAuto;
+};
 
 document.querySelector(".next").onclick = () => show(index + 1);
 document.querySelector(".prev").onclick = () => show(index - 1);
