@@ -307,6 +307,7 @@ textarea {
 .right {
   align-items: flex-start;
   border-left: 2px solid #fff;
+  font-family: "DM Serif Display", serif;
 }
 
 .right p {
