@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Thiệp Mời: Hồng Sơn & Thuỳ Vân</title>
+  </head>
+  <body>
+    <!-- INTRO THIỆP -->
+    <div class="intro" id="intro">
+      <canvas id="snow"></canvas>
+      <div class="intro-card">
+        <div class="intro-heart">❤</div>
+        <h2>Hồng Sơn & Thuỳ Vân</h2>
+        <p>Thân mời</p>
+        <button id="open-invite">
+          <i class="fa-solid fa-envelope-open"></i>
+          Mở thiệp
+        </button>
+      </div>
+    </div>
+
+    <audio id="bg-music" src="MMBN.mp3" loop></audio>
+    <button id="music-btn" class="music-btn">
+      <i class="fa-solid fa-volume-xmark"></i>
+    </button>
+
+    <div class="main-content" id="main">
+      <!-- ===== MAIN INVITE ===== -->
+      <div id="invite" class="container hidden">
+        <canvas id="sakura"></canvas>
+        <div class="heading reveal">
+          <h1 class="married__text">We get married!</h1>
+          <h2>Hồng Sơn</h2>
+          <h2>Thuỳ Vân</h2>
+        </div>
+        <div class="title reveal">
+          <h3>Thư mời tham dự lễ cưới</h3>
+          <p>trân trọng kính mời đến dự lễ cưới của chúng mình</p>
+        </div>
+        <div class="section-info reveal">
+          <div class="info-person">
+            <h3>Chú re`</h3>
+            <p>Hồng Sơn</p>
+            <img src="images/KL408016.jpg" alt="" class="person-image" />
+          </div>
+          <div class="info-person">
+            <img src="images/KL407972.jpg" alt="" class="person-image" />
+            <h3>Cô dâu</h3>
+            <p>Thuỳ Vân</p>
+          </div>
+        </div>
+        <div class="caption reveal">
+          Đám cưới không chỉ là ngày trọng đại, mà là khởi đầu cho hành trình
+          mới của yêu thương. Giữa dòng đời vội vã, chúng ta tìm thấy nhau và
+          chọn gắn bó bằng tất cả sự chân thành. Hôm nay, anh và em cùng bước
+          vào chương mới của cuộc đời, nơi tình yêu trở thành mái ấm, và hạnh
+          phúc mang tên “chúng ta”
+        </div>
+
+        <img
+          src="images/KL407599.jpg"
+          alt=""
+          class="caption-image reveal image"
+        />
+
+        <div class="time-line reveal">
+          <h2 class="the-wedding">The Wedding</h2>
+          <p class="of">of</p>
+          <h3 class="person-name">Hồng Sơn & Thuỳ Vân</h3>
+          <div class="fm-positon">
+            <div class="position">
+              <h3>NHÀ TRAI</h3>
+              <p class="father">Bố: Lê Văn Cầu</p>
+              <p class="mother">Mẹ: Nguyễn Thị Trần</p>
+            </div>
+            <div class="position">
+              <h3>NHÀ GÁI</h3>
+              <p class="father">Bố: Trần Văn Quyền</p>
+              <p class="mother">Mẹ: Hoàng Thị Sỹ</p>
+            </div>
+          </div>
+          <h2 class="married-success">LỄ THÀNH HÔN</h2>
+          <p>Được tổ chức vào lúc</p>
+          <p class="time">10 giờ 00, Thứ Tư</p>
+          <p class="date">28 | 01 | 2026</p>
+          <p class="date-desc">( Tức ngày 10 tháng 12 năm Ất Tỵ )</p>
+          <img src="images/nhan.png" alt="nhan" class="nhan_img" />
+          <h3 class="at">Tại: Tư Gia nhà trai</h3>
+          <p class="address">Hưng Yên Nam 5, Yên Trung, Nghệ An</p>
+          <div class="navigation">
+            <img src="images/tim.png" alt="tim" class="navigation-icon" />
+            <h3 class="navigation-text">CHỈ ĐƯỜNG</h3>
+          </div>
+
+          <h2 class="married-success">TIỆC CƯỚI</h2>
+          <p>Được tổ chức vào lúc</p>
+          <p class="time">10 giờ 00, Thứ Tư</p>
+          <p class="date">27 | 01 | 2026</p>
+          <p class="date-desc">( Tức ngày 09 tháng 12 năm Ất Tỵ )</p>
+          <img src="images/nhan.png" alt="nhan" class="nhan_img" />
+          <h3 class="at">Tại: Tư Gia nhà gái</h3>
+          <p class="address">Hưng Yên Nam 5, Yên Trung, Nghệ An</p>
+          <div class="navigation">
+            <img src="images/tim.png" alt="tim" class="navigation-icon" />
+            <h3 class="navigation-text">CHỈ ĐƯỜNG</h3>
+          </div>
+
+          <a href="#wishForm" class="confirm-join">XÁC NHẬN THAM DỰ</a>
+          <img src="images/4.jpg" alt="4" />
+        </div>
+
+        <div class="time-detail reveal">
+          <div class="time-detail__title">TimeLine</div>
+          <div class="time-detail__content">
+            <div class="left">
+              <img src="images/1.png" alt="1" />
+              <img src="images/2.png" alt="1" />
+              <img src="images/3.png" alt="1" />
+            </div>
+            <div class="right">
+              <p>
+                10:00
+                <span>ĐÓN KHÁCH<i class="fa fa-heart heart-icon"></i></span>
+              </p>
+              <p>
+                10:30 <span>NGHI LỄ<i class="fa fa-heart heart-icon"></i></span>
+              </p>
+              <p>
+                11:00
+                <span>KHAI TIỆC<i class="fa fa-heart heart-icon"></i></span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="the-diary reval image">
+          <img src="images/KL407768.jpg" alt="s" class="the-diary__image" />
+          <div class="the-diary__text">
+            <h3>THE DIARY</h3>
+            <p>of love</p>
+          </div>
+        </div>
+
+        <div class="carousel reveal">
+          <!-- ảnh lớn -->
+          <div class="carousel-main">
+            <div class="image-wrapper">
+              <img id="mainImage" src="images/KL407498.jpg" />
+            </div>
+          </div>
+
+          <!-- thumbnail -->
+          <div class="carousel-thumbs">
+            <img src="images/KL407498.jpg" class="thumb active" />
+            <img src="images/KL407507.jpg" class="thumb" />
+            <img src="images/KL407599.jpg" class="thumb" />
+            <img src="images/KL407740.jpg" class="thumb" />
+            <div class="thumb more" data-more="+12">
+              <img src="images/KL407768.jpg" />
+            </div>
+          </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div class="lightbox" id="lightbox">
+          <span class="close">×</span>
+          <span class="nav prev">‹</span>
+          <img id="lightboxImage" />
+          <span class="nav next">›</span>
+        </div>
+        <div class="wedding-form reveal">
+          <form id="wishForm" class="wish-form">
+            <h1 class="wedding-form__title">XÁC NHẬN</h1>
+            <p class="wedding-form__caption">
+              Hãy xác nhận sự có mặt của bạn để chúng mình chuẩn bị đón tiếp 1
+              cách chu đáo nhất.
+            </p>
+            <div class="form-content">
+              <span>Trân trọng!</span>
+              <input id="name" placeholder="Tên của bạn" required />
+              <textarea id="message" placeholder="Lời chúc" required></textarea>
+              <button type="submit">Gửi lời chúc</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="wishList" class="wish-list"></div>
+
+        <div class="happy-wedding reveal">
+          <h3 class="happy">Wedding Gift</h3>
+          <p class="thank-you">
+            Gia đình xin chân thành cảm ơn Quý Khách đã đến chung vui
+          </p>
+
+          <p class="qr-title">Chú Rể</p>
+          <img src="images/QRSON.png" alt="sonQR" class="qr-img" />
+          <p class="bank-name">Vietcombank</p>
+          <p class="bank-number">1033190510</p>
+          <p class="bank-holder">LÊ HỒNG SƠN</p>
+
+          <p class="qr-title">Cô Dâu</p>
+          <img src="images/QRSON.png" alt="sonQR" class="qr-img" />
+          <p class="bank-name">Vietcombank</p>
+          <p class="bank-number">1040238259</p>
+          <p class="bank-holder">Trần Thị Vân</p>
+
+          <p class="thank-you2">Thank You!</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="count-title">Coutn Down</h2>
+        <div class="countdown reveal">
+          <div class="time">
+            <span id="days">00</span>
+            <small>NGÀY</small>
+          </div>
+          <div class="time">
+            <span id="hours">00</span>
+            <small>GIỜ</small>
+          </div>
+          <div class="time">
+            <span id="minutes">00</span>
+            <small>PHÚT</small>
+          </div>
+          <div class="time">
+            <span id="seconds">00</span>
+            <small>GIÂY</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp,
+        onSnapshot,
+        query,
+        orderBy,
+      } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDN0cdOhqx1Cru2vXfWF365Oq_t8CU-1BY",
+        authDomain: "wedding-son-van.firebaseapp.com",
+        projectId: "wedding-son-van",
+        storageBucket: "wedding-son-van.firebasestorage.app",
+        messagingSenderId: "869725889534",
+        appId: "1:869725889534:web:1411f31bb7faad8c1f16af",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      console.log("🔥 Firebase connected!");
+
+      const form = document.getElementById("wishForm");
+      const nameInput = document.getElementById("name");
+      const messageInput = document.getElementById("message");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const nameValue = nameInput.value.trim();
+        const messageValue = messageInput.value.trim();
+
+        if (!nameValue || !messageValue) {
+          alert("Vui lòng nhập đầy đủ thông tin 💌");
+          return;
+        }
+
+        await addDoc(collection(db, "wishes"), {
+          name: nameValue,
+          message: messageValue,
+          createdAt: serverTimestamp(),
+        });
+
+        alert("💖 Đã gửi lời chúc!");
+        form.reset();
+      });
+
+      const list = document.getElementById("wishList");
+
+      const q = query(collection(db, "wishes"), orderBy("createdAt", "desc"));
+
+      onSnapshot(q, (snapshot) => {
+        list.innerHTML = "";
+
+        snapshot.forEach((doc) => {
+          const w = doc.data();
+
+          const card = document.createElement("div");
+          card.className = "wish-card";
+
+          const time = w.createdAt?.toDate
+            ? w.createdAt.toDate().toLocaleString("vi-VN")
+            : "";
+
+          card.innerHTML = `
+      <div class="wish-name">${w.name}</div>
+      <div class="wish-message">${w.message}</div>
+      <div class="wish-time">${time}</div>
+    `;
+
+          list.appendChild(card);
+
+          // trigger animation
+          requestAnimationFrame(() => {
+            card.classList.add("show");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
