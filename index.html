@@ -37,7 +37,7 @@
       <!-- ===== MAIN INVITE ===== -->
       <div id="invite" class="container hidden">
         <canvas id="sakura"></canvas>
-        <div class="heading reveal">
+        <div class="heading reveal zoom">
           <h1 class="married__text">We get married!</h1>
           <h2>Hồng Sơn</h2>
           <h2>Thuỳ Vân</h2>
@@ -47,12 +47,12 @@
           <p>trân trọng kính mời đến dự lễ cưới của chúng mình</p>
         </div>
         <div class="section-info reveal">
-          <div class="info-person">
+          <div class="info-person reveal lefts">
             <h3>Chú re`</h3>
             <p>Hồng Sơn</p>
             <img src="images/KL408016.jpg" alt="" class="person-image" />
           </div>
-          <div class="info-person">
+          <div class="info-person reveal rights">
             <img src="images/KL407972.jpg" alt="" class="person-image" />
             <h3>Cô dâu</h3>
             <p>Thuỳ Vân</p>
@@ -69,10 +69,10 @@
         <img
           src="images/KL407599.jpg"
           alt=""
-          class="caption-image reveal image"
+          class="caption-image reveal image blur"
         />
 
-        <section id="calendar" class="calendar-section reveal image">
+        <section id="calendar" class="calendar-section reveal zoom">
           <h2 class="calendar-title">
             <i class="fa fa-calendar"></i> LỊCH CƯỚI
           </h2>
@@ -217,7 +217,7 @@
           </div>
         </div>
 
-        <div class="the-diary reval image">
+        <div class="the-diary reveal image">
           <img src="images/KL407768.jpg" alt="s" class="the-diary__image" />
           <div class="the-diary__text">
             <h3>THE DIARY</h3>
@@ -245,7 +245,7 @@
           </div>
         </div>
 
-        <div class="wedding-form reveal">
+        <div class="wedding-form reveal lefts">
           <form id="wishForm" class="wish-form">
             <h1 class="wedding-form__title">XÁC NHẬN</h1>
             <p class="wedding-form__caption">
@@ -263,7 +263,7 @@
 
         <div id="wishList" class="wish-list"></div>
 
-        <section id="map" class="map-section reveal">
+        <section id="map" class="map-section reveal zoom">
           <h2 class="map-title">BẢN ĐỒ CHỈ ĐƯỜNG</h2>
 
           <div class="map-card">
@@ -277,13 +277,9 @@
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
 
-            <a
-              class="open-map"
-              target="_blank"
-              href="https://www.google.com/maps?q=Hưng+Yên+Nam+5,+Yên+Trung,+Nghệ+An"
-            >
-              <i class="fa-brands fa-safari"></i> Mở Google Maps
-            </a>
+            <button class="open-map" onclick="openMap()">
+              <i class="fa-brands fa-safari"></i> Chỉ đường tới đây
+            </button>
           </div>
         </section>
 

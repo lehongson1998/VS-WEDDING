@@ -337,14 +337,19 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        observer.unobserve(entry.target); // chạy 1 lần
+      } else {
+        entry.target.classList.remove("show");
       }
     });
   },
   {
-    threshold: 0.15,
+    threshold: 0.2,
   }
 );
+
+document.querySelectorAll(".reveal").forEach((el) => {
+  observer.observe(el);
+});
 
 reveals.forEach((el) => observer.observe(el));
 
@@ -354,4 +359,26 @@ function isMessenger() {
 
 if (isMessenger()) {
   document.body.classList.add("in-messenger");
+}
+
+function openMap() {
+  const address = "Hưng Yên Nam 5, Yên Trung, Nghệ An";
+  const encoded = encodeURIComponent(address);
+
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const isAndroid = /Android/i.test(navigator.userAgent);
+
+  if (isIOS) {
+    // iPhone → Apple Maps
+    window.open(`https://maps.apple.com/?q=${encoded}`, "_blank");
+  } else if (isAndroid) {
+    // Android → Google Maps app
+    window.open(
+      `https://www.google.com/maps/dir/?api=1&destination=${encoded}`,
+      "_blank"
+    );
+  } else {
+    // PC
+    window.open(`https://www.google.com/maps?q=${encoded}`, "_blank");
+  }
 }

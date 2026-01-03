@@ -855,11 +855,12 @@ textarea {
   z-index: 5;
 }
 
-/* ===== SCROLL ANIMATION ===== */
+/* ===== REVEAL BASE ===== */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 
 .reveal.show {
@@ -867,13 +868,33 @@ textarea {
   transform: translateY(0);
 }
 
-/* nhẹ nhàng hơn cho ảnh */
-.reveal.image {
-  transform: scale(0.95);
+/* ===== BIẾN THỂ ===== */
+.reveal.lefts {
+  transform: translateX(-60px);
+}
+.reveal.rights {
+  transform: translateX(60px);
+}
+.reveal.zoom {
+  transform: scale(0.9);
+}
+.reveal.blur {
+  filter: blur(12px);
 }
 
-.reveal.image.show {
-  transform: scale(1);
+.reveal.lefts.show,
+.reveal.rights.show,
+.reveal.zoom.show {
+  transform: none;
+}
+
+.reveal.blur.show {
+  filter: blur(0);
+}
+
+/* ảnh vào mượt hơn */
+.reveal.image {
+  transition: all 1.2s ease;
 }
 
 .open-browser-hint {
@@ -1030,11 +1051,12 @@ textarea {
 }
 
 .open-map {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background: #91804d;
-  color: #fff;
+  margin-top: 18px;
+  padding: 12px 22px;
   border-radius: 999px;
-  text-decoration: none;
+  background: #c9a44c;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
