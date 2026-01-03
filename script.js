@@ -347,3 +347,11 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach((el) => observer.observe(el));
+
+function isMessenger() {
+  return /FBAN|FBAV|Messenger/i.test(navigator.userAgent);
+}
+
+if (isMessenger()) {
+  document.body.classList.add("in-messenger");
+}
