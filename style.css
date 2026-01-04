@@ -1132,3 +1132,23 @@ textarea {
   background: #000;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
+.guest-name {
+  margin: 12px 0 18px;
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 3.6rem;
+  color: #c9a44c;
+  letter-spacing: 2px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

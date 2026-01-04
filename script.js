@@ -261,6 +261,21 @@ document.getElementById("open-invite").addEventListener("click", () => {
   canvas.remove();
 });
 
+function loadGuestName() {
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get("to");
+
+  const guestEl = document.getElementById("guestName");
+
+  if (name) {
+    guestEl.textContent = decodeURIComponent(name);
+  } else {
+    guestEl.textContent = "Bạn";
+  }
+}
+
+loadGuestName();
+
 const sakuraCanvas = document.getElementById("sakura");
 const sCtx = sakuraCanvas.getContext("2d");
 
