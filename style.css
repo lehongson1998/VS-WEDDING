@@ -347,7 +347,6 @@ textarea {
 
 .the-diary {
   width: 100%;
-  margin-top: 5px;
   position: relative;
   margin-bottom: 5px;
   font-family: "DM Serif Display", serif;
@@ -1110,7 +1109,6 @@ textarea {
   text-align: center;
   position: relative;
   margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .video-title {
