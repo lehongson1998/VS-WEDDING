@@ -382,3 +382,53 @@ function openMap() {
     window.open(`https://www.google.com/maps?q=${encoded}`, "_blank");
   }
 }
+
+const video = document.querySelector(".wedding-video");
+const bgMusic = document.getElementById("bg-music");
+
+let videoPlaying = false;
+
+if (video) {
+  const videoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // ▶️ scroll tới video
+          if (!videoPlaying) {
+            video.play().catch(() => {});
+            videoPlaying = true;
+
+            // tắt nhạc nền
+            if (bgMusic && !bgMusic.paused) {
+              bgMusic.pause();
+            }
+          }
+        } else {
+          // ⏸️ scroll rời khỏi video
+          if (videoPlaying) {
+            video.pause();
+            videoPlaying = false;
+
+            // 🎵 bật lại nhạc nền
+            if (bgMusic && bgMusic.paused) {
+              bgMusic.play().catch(() => {});
+            }
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.6, // thấy 60% video mới play
+    }
+  );
+
+  videoObserver.observe(video);
+
+  // 🎵 nếu xem hết video → bật lại nhạc
+  video.addEventListener("ended", () => {
+    videoPlaying = false;
+    if (bgMusic) {
+      bgMusic.play().catch(() => {});
+    }
+  });
+}
