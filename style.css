@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 :root {
   /* --primary-color: #91804d; */
@@ -1134,21 +1135,22 @@ textarea {
 }
 
 .guest-name {
-  margin: 12px 0 18px;
-  font-family: "Mrs Saint Delafield", cursive;
+  margin: 10px 0 10px;
+  font-family: "Caveat", cursive;
   font-size: 3.6rem;
   color: #c9a44c;
   letter-spacing: 2px;
-  animation: fadeUp 1.2s ease forwards;
+  animation: fadeUp 1.2s infinite alternate;
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(12px);
   }
+}
+
+.family {
+  font-family: "Caveat", cursive;
+  margin-top: 5px;
 }
