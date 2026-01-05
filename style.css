@@ -462,65 +462,52 @@ textarea {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.92);
-  display: none;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 99999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
 }
 
 .lightbox.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .lightbox img {
   max-width: 90%;
   max-height: 90%;
-  animation: slideFadeIn 0.5s ease;
+  border-radius: 12px;
 }
 
 .lightbox .close {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 36px;
-  color: white;
+  font-size: 32px;
+  color: #fff;
   cursor: pointer;
-  width: 5rem;
-  height: 5rem;
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5rem;
 }
 
 .lightbox .nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 36px;
-  color: white;
+  font-size: 40px;
+  color: #fff;
   cursor: pointer;
-  user-select: none;
 }
 
 .lightbox .prev {
-  left: 20px;
+  left: 30px;
 }
 
 .lightbox .next {
-  right: 20px;
-}
-
-.lightbox i {
-  width: 5rem;
-  height: 5rem;
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5rem;
+  right: 30px;
 }
 
 .wedding-form {
