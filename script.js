@@ -377,24 +377,25 @@ if (isMessenger()) {
 }
 
 function openMap() {
-  const address = "Hưng Yên Nam 5, Yên Trung, Nghệ An";
-  const encoded = encodeURIComponent(address);
+  // 👉 TOẠ ĐỘ CHUẨN (thay bằng tọa độ nhà bạn)
+  const lat = 18.754928;
+  const lng = 105.610647;
 
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const isAndroid = /Android/i.test(navigator.userAgent);
 
   if (isIOS) {
-    // iPhone → Apple Maps
-    window.open(`https://maps.apple.com/?q=${encoded}`, "_blank");
+    // Apple Maps
+    window.location.href = `maps://maps.apple.com/?q=${lat},${lng}`;
   } else if (isAndroid) {
-    // Android → Google Maps app
+    // Google Maps app
+    window.location.href = `geo:${lat},${lng}?q=${lat},${lng}`;
+  } else {
+    // Desktop
     window.open(
-      `https://www.google.com/maps/dir/?api=1&destination=${encoded}`,
+      `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`,
       "_blank"
     );
-  } else {
-    // PC
-    window.open(`https://www.google.com/maps?q=${encoded}`, "_blank");
   }
 }
 
