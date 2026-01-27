@@ -122,16 +122,6 @@ function updateCountdown() {
   const now = new Date().getTime();
   const diff = targetDate - now;
 
-  if (diff <= 0) {
-    clearInterval(timer);
-    daysEl.textContent = "00";
-    hoursEl.textContent = "00";
-    minutesEl.textContent = "00";
-    secondsEl.textContent = "00";
-    alert("⏰ Đã đến 9h sáng 27/01/2026!");
-    return;
-  }
-
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
